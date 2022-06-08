@@ -8,18 +8,16 @@ class SolarSystem extends Component {
     return (
       <>
         <Title headline="Planetas" />
-        <div>
           {
             planets.map((el) => (
-              <PlanetCard 
-                key={ el.name }
-                planetName={ el.name }
-                planetImage={ el.image }
-              />
+                <PlanetCard
+                  key={ el.name }
+                  planetName={ el.name }
+                  planetImage={ el.image }
+                />
               )
             )
           }
-        </div>
       </>
     )
   }
