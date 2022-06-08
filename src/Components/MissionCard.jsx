@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 class MissionCard extends Component {
@@ -10,11 +11,24 @@ class MissionCard extends Component {
     const { destination } = this.props;
     return (
       // Conteúdo MissionCard
-      <div data-testid="mission-card">
-        <p data-testid="mission-name">{`Nome da Missão: ${name}`}</p>
-        <p data-testid="mission-year">{`Ano da Missão: ${year}`}</p>
-        <p data-testid="mission-country">{`Responssáveis pela Missão: ${country}`}</p>
-        <p data-testid="mission-destination">{`Destino da Missão: ${destination}`}</p>
+
+      <div className="missions-container">
+        <Card style={{ width: '25rem' }} className="missions-card">
+          <Card.Body>
+            <Card.Title>
+              {`Nome da Missão: ${name}`}
+            </Card.Title>
+            <Card.Text>
+              {`Ano da Missão: ${year}`}
+            </Card.Text>
+            <Card.Text>
+              {`Responssáveis pela Missão: ${country}`}
+            </Card.Text>
+            <Card.Text>
+              {`Destino da Missão: ${destination}`}
+            </Card.Text>
+          </Card.Body>
+        </Card>
       </div>
     );
   }

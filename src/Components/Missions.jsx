@@ -9,11 +9,9 @@ class Missions extends Component {
     return (
       <>
         {/* Titulo do Conteúdo */}
-        <div data-testid="missions">
-          <Title headline="Missões" />
-        </div>
+        <Title headline="Missões" />
         {/* Conteúdo das Missões */}
-        <div>
+        <div className="missions-container">
           { missions.map((element) => (
               <MissionCard
                 key={ element.name }
