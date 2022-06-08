@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 class Header extends Component {
-  render() {
+  render()
+  {
     return (
       <header className="header-solar-system">
         <h1 className="title-solar-system">
